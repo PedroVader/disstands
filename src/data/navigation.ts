@@ -1,7 +1,7 @@
 import { NavLink, FooterColumn } from "@/types";
 
 export const mainNavLinks: NavLink[] = [
-  { label: "Productos", href: "#categorias" },
+  { label: "Catálogo", href: "/catalogo" },
   { label: "Servicios", href: "#servicios" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Blog", href: "#blog" },

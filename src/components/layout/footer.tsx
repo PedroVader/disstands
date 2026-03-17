@@ -12,12 +12,12 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-brand-black">
+    <footer className="border-t border-brand-gray bg-brand-cream">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-4">
           {/* Brand column */}
           <div>
-            <Logo variant="white" />
+            <Logo variant="dark" />
             <p className="mt-4 text-sm leading-relaxed text-brand-gray-dark">
               Especialistas en pavimentos para ferias, eventos y espacios
               comerciales. Más de 23 años transformando espacios en toda Europa.
@@ -27,7 +27,7 @@ export function Footer() {
           {/* Link columns */}
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h4 className="font-[var(--font-heading)] text-sm font-semibold uppercase tracking-wider text-white">
+              <h4 className="font-[var(--font-heading)] text-sm font-semibold uppercase tracking-wider text-brand-black">
                 {column.title}
               </h4>
               <ul className="mt-4 space-y-3">
@@ -46,7 +46,7 @@ export function Footer() {
           ))}
         </div>
 
-        <Separator className="my-10 bg-white/10" />
+        <Separator className="my-10 bg-brand-gray" />
 
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">

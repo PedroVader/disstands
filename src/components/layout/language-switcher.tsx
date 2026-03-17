@@ -7,6 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const languages = [
@@ -15,21 +16,31 @@ const languages = [
   { code: "EN", label: "English" },
 ];
 
-export function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  scrolled?: boolean;
+}
+
+export function LanguageSwitcher({ scrolled }: LanguageSwitcherProps) {
   const [current, setCurrent] = useState("ES");
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-lg px-2.5 py-1 text-sm text-white/70 transition-colors hover:text-white hover:bg-white/10">
+      <DropdownMenuTrigger
+        className={cn(
+          "inline-flex items-center gap-1 rounded-lg px-2.5 py-1 text-sm transition-colors",
+          scrolled
+            ? "text-brand-gray-dark hover:text-brand-black hover:bg-brand-cream"
+            : "text-white/70 hover:text-white hover:bg-white/10"
+        )}
+      >
         <Globe className="h-4 w-4" />
         {current}
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-brand-dark border-white/10">
+      <DropdownMenuContent align="end">
         {languages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
             onSelect={() => setCurrent(lang.code)}
-            className="text-white/70 hover:text-white focus:text-white focus:bg-white/10"
           >
             {lang.label}
           </DropdownMenuItem>

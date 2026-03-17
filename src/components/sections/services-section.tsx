@@ -5,11 +5,11 @@ import { services } from "@/data/services";
 
 export function ServicesSection() {
   return (
-    <SectionWrapper background="black" id="servicios">
+    <SectionWrapper background="white" id="servicios">
       <SectionTitle
         title="Servicios"
         subtitle="Soluciones integrales adaptadas a cada tipo de proyecto"
-        colorScheme="dark"
+        colorScheme="light"
       />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         {services.map((service) => (

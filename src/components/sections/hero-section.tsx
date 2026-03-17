@@ -1,17 +1,20 @@
+import Image from "next/image";
 import { CtaButton } from "@/components/shared/cta-button";
 import { ScrollIndicator } from "@/components/shared/scroll-indicator";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center bg-brand-black">
-      {/* Background image overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{
-          backgroundImage:
-            "url('https://placehold.co/1920x1080/0A0A0A/1A1A1A?text=')",
-        }}
+    <section className="relative flex min-h-screen items-center overflow-hidden">
+      {/* Background photo */}
+      <Image
+        src="/hero-bg.jpg"
+        alt="Tejidos de colores Disstands"
+        fill
+        priority
+        className="object-cover blur-sm scale-105"
       />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8">
         <div className="max-w-3xl text-center lg:text-left">
@@ -23,11 +26,11 @@ export function HeroSection() {
             <span className="text-brand-red">transforman</span>{" "}
             espacios
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-brand-gray-dark sm:text-xl lg:mx-0 mx-auto">
+          <p className="mt-6 mx-auto max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl lg:mx-0">
             Especialistas en moquetas, césped artificial, PVC y losetas para
             ferias, eventos y espacios comerciales en toda Europa.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:justify-start justify-center">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
             <CtaButton variant="primary" size="lg" href="#contacto">
               Solicitar Presupuesto
             </CtaButton>

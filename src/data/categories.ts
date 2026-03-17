@@ -34,6 +34,22 @@ export const categories: Category[] = [
     description: "Losetas modulares para espacios de alto tráfico",
   },
   {
+    id: "caucho",
+    name: "Caucho y Deportivos",
+    slug: "caucho-deportivos",
+    productCount: 13,
+    image: "https://placehold.co/600x400/1A1A1A/E30613?text=Caucho",
+    description: "Pavimentos de caucho para gimnasios y zonas deportivas",
+  },
+  {
+    id: "jardines",
+    name: "Jardines Verticales",
+    slug: "jardines-verticales",
+    productCount: 17,
+    image: "https://placehold.co/600x400/1A1A1A/E30613?text=Jardines",
+    description: "Jardines verticales artificiales decorativos",
+  },
+  {
     id: "adhesivos",
     name: "Adhesivos",
     slug: "adhesivos",

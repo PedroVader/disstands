@@ -5,7 +5,7 @@ import { Sparkles } from "lucide-react";
 
 export function MontaTuFeriaCta() {
   return (
-    <SectionWrapper background="black" className="overflow-hidden">
+    <SectionWrapper background="cream" className="overflow-hidden">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         {/* Text */}
         <div>
@@ -13,7 +13,7 @@ export function MontaTuFeriaCta() {
             <Sparkles className="h-4 w-4" />
             Nuevo — Configurador IA
           </div>
-          <h2 className="mt-6 font-[var(--font-heading)] text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-6 font-[var(--font-heading)] text-3xl font-bold text-brand-black sm:text-4xl lg:text-5xl">
             Monta tu Feria
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-brand-gray-dark">
@@ -29,7 +29,7 @@ export function MontaTuFeriaCta() {
             ].map((item) => (
               <li
                 key={item}
-                className="flex items-center gap-3 text-sm text-white/70"
+                className="flex items-center gap-3 text-sm text-brand-gray-dark"
               >
                 <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-red text-[10px] text-white">
                   ✓
@@ -48,7 +48,7 @@ export function MontaTuFeriaCta() {
         {/* Image */}
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
           <Image
-            src="https://placehold.co/800x600/1A1A1A/E30613?text=Configurador+IA"
+            src="https://placehold.co/800x600/E5E5E5/6B6B6B?text=Configurador+IA"
             alt="Configurador de stands Disstands"
             fill
             className="object-cover"

@@ -5,7 +5,7 @@ export function TrustBar() {
   const duplicated = [...trustClients, ...trustClients];
 
   return (
-    <section id="trust" className="overflow-hidden bg-brand-dark py-10">
+    <section id="trust" className="overflow-hidden border-b border-brand-gray bg-white py-10">
       <p className="mb-6 text-center text-xs font-medium uppercase tracking-widest text-brand-gray-dark">
         Confían en nosotros
       </p>
@@ -14,7 +14,7 @@ export function TrustBar() {
           {duplicated.map((client, i) => (
             <div
               key={`${client.id}-${i}`}
-              className="flex h-10 w-40 shrink-0 items-center justify-center grayscale opacity-50 transition-all hover:grayscale-0 hover:opacity-100"
+              className="flex h-10 w-40 shrink-0 items-center justify-center grayscale opacity-40 transition-all hover:grayscale-0 hover:opacity-100"
             >
               <Image
                 src={client.logo}

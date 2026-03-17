@@ -7,16 +7,45 @@ export interface Category {
   description: string;
 }
 
+export interface ProductVariant {
+  id: string;
+  color: string;
+  colorHex: string;
+  sku: string;
+  stockM2: number;
+  image: string;
+}
+
 export interface Product {
   id: string;
   name: string;
   slug: string;
   category: string;
+  categorySlug: string;
   priceFrom: number;
   unit: string;
   image: string;
+  images: string[];
   badge?: "Nuevo" | "Eco" | "Popular";
   description: string;
+  descriptionLong?: string;
+  material?: string;
+  thickness?: string;
+  minM2: number;
+  variants: ProductVariant[];
+  specs?: Record<string, string>;
+  featured?: boolean;
+}
+
+export interface CartItem {
+  productId: string;
+  variantId: string;
+  productName: string;
+  variantColor: string;
+  image: string;
+  pricePerM2: number;
+  m2: number;
+  slug: string;
 }
 
 export interface Service {

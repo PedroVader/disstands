@@ -15,7 +15,7 @@ function StatItem({ stat, isVisible }: { stat: Stat; isVisible: boolean }) {
 
   return (
     <div className="text-center">
-      <p className="font-[var(--font-heading)] text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
+      <p className="font-[var(--font-heading)] text-4xl font-bold text-brand-black sm:text-5xl lg:text-6xl">
         {stat.prefix}
         {formatted}
         {stat.suffix && (
@@ -33,7 +33,7 @@ export function StatsCounter() {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.3 });
 
   return (
-    <section className="bg-brand-black py-16 sm:py-20 lg:py-24" ref={ref}>
+    <section className="border-y border-brand-gray bg-white py-16 sm:py-20 lg:py-24" ref={ref}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {stats.map((stat) => (
