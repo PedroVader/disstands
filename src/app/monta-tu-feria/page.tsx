@@ -1,9 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FloorPlanConfigurator } from "./configurator-client";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/navbar";
 import { Loader2 } from "lucide-react";
+
+const FloorPlanConfigurator = dynamic(
+  () => import("./configurator-client").then((mod) => mod.FloorPlanConfigurator),
+  { ssr: false },
+);
 
 interface FloorType {
   id: string;
@@ -23,7 +28,6 @@ export default function MontaTuFeriaPage() {
         if (Array.isArray(data) && data.length > 0) {
           setFloorTypes(data);
         } else {
-          // Fallback materials if DB is empty
           setFloorTypes([
             { id: "1", name: "Moqueta estándar", color: "#1E40AF", price_per_m2: 12.5 },
             { id: "2", name: "Moqueta premium", color: "#7C3AED", price_per_m2: 18.0 },
