@@ -10,21 +10,35 @@ import { PortfolioGallery } from "@/components/sections/portfolio-gallery";
 import { StatsCounter } from "@/components/sections/stats-counter";
 import { BlogPreview } from "@/components/sections/blog-preview";
 import { CtaBanner } from "@/components/sections/cta-banner";
+import {
+  getCategories,
+  getProducts,
+  getBlogPosts,
+  getPortfolioItems,
+} from "@/lib/supabase/queries";
 
-export default function Home() {
+export default async function Home() {
+  const [categories, featuredProducts, blogPosts, portfolioItems] =
+    await Promise.all([
+      getCategories(),
+      getProducts({ featured: true, limit: 4 }),
+      getBlogPosts({ limit: 3 }),
+      getPortfolioItems(),
+    ]);
+
   return (
     <>
       <Navbar />
       <main>
         <HeroSection />
         <TrustBar />
-        <CategoryNavigation />
+        <CategoryNavigation data={categories} />
         <ServicesSection />
-        <FeaturedProducts />
+        <FeaturedProducts data={featuredProducts} />
         <MontaTuFeriaCta />
-        <PortfolioGallery />
+        <PortfolioGallery data={portfolioItems} />
         <StatsCounter />
-        <BlogPreview />
+        <BlogPreview data={blogPosts} />
         <CtaBanner />
       </main>
       <Footer />

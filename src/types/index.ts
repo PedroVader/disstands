@@ -16,6 +16,20 @@ export interface ProductVariant {
   image: string;
 }
 
+export interface ProductSpecification {
+  id: string;
+  label: string;
+  value: string;
+}
+
+export interface ProductDocument {
+  id: string;
+  name: string;
+  type: 'ficha_tecnica' | 'certificado' | 'manual' | 'otro';
+  url: string;
+  fileSize?: number;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -26,7 +40,7 @@ export interface Product {
   unit: string;
   image: string;
   images: string[];
-  badge?: "Nuevo" | "Eco" | "Popular";
+  badge?: string;
   description: string;
   descriptionLong?: string;
   material?: string;
@@ -34,6 +48,9 @@ export interface Product {
   minM2: number;
   variants: ProductVariant[];
   specs?: Record<string, string>;
+  specifications?: ProductSpecification[];
+  fichaTecnicaUrl?: string;
+  documents?: ProductDocument[];
   featured?: boolean;
 }
 
@@ -88,6 +105,7 @@ export interface TrustClient {
   id: string;
   name: string;
   logo: string;
+  large?: boolean;
 }
 
 export interface NavLink {

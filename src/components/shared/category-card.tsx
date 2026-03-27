@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { cn, safeImageUrl } from "@/lib/utils";
 import { Category } from "@/types";
 
 interface CategoryCardProps {
@@ -10,7 +10,7 @@ interface CategoryCardProps {
 export function CategoryCard({ category, className }: CategoryCardProps) {
   return (
     <a
-      href={`/productos/${category.slug}`}
+      href={`/catalogo?categoria=${category.slug}`}
       className={cn(
         "group relative block overflow-hidden rounded-lg transition-shadow duration-300 hover:shadow-xl",
         className
@@ -18,7 +18,7 @@ export function CategoryCard({ category, className }: CategoryCardProps) {
     >
       <div className="relative aspect-[3/2] overflow-hidden">
         <Image
-          src={category.image}
+          src={safeImageUrl(category.image)}
           alt={category.name}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -169,3 +169,149 @@
     font-family: var(--font-body);
   }
 }
+
+/* Blog article styles — override WP content */
+.blog-article {
+  color: #1A1A1A;
+  line-height: 1.8;
+}
+.blog-article * {
+  font-family: inherit !important;
+  background-color: transparent !important;
+}
+.blog-article h2 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #E5E5E5;
+}
+.blog-article h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0A0A0A;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.blog-article p {
+  color: #6B6B6B;
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+.blog-article strong {
+  color: #0A0A0A;
+}
+.blog-article a {
+  color: #E30613;
+  text-decoration: none;
+  font-weight: 500;
+}
+.blog-article a:hover {
+  text-decoration: underline;
+}
+.blog-article ul,
+.blog-article ol {
+  margin: 1.25rem 0;
+  padding-left: 1.5rem;
+}
+.blog-article li {
+  color: #6B6B6B;
+  margin-bottom: 0.5rem;
+}
+.blog-article li strong {
+  color: #0A0A0A;
+}
+.blog-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #E5E5E5;
+}
+.blog-article thead {
+  background: #F5F5F5;
+}
+.blog-article th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #0A0A0A;
+  border-bottom: 2px solid #E5E5E5;
+}
+.blog-article td {
+  padding: 0.625rem 1rem;
+  color: #6B6B6B;
+  border-bottom: 1px solid #F5F5F5;
+}
+.blog-article tbody tr:hover {
+  background: #F5F5F5;
+}
+.blog-article img {
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+}
+.blog-article blockquote {
+  border-left: 4px solid #E30613;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: #F5F5F5;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.blog-article blockquote p {
+  color: #1A1A1A;
+  font-style: italic;
+}
+
+/* Print styles for order PDF export */
+@media print {
+  /* Hide admin shell navigation */
+  nav,
+  aside,
+  [data-sidebar],
+  [data-admin-nav] {
+    display: none !important;
+  }
+
+  /* Reset main content to full width */
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Hide interactive elements */
+  button:not([data-print-show]),
+  .no-print {
+    display: none !important;
+  }
+
+  /* Hide status menu, notes section */
+  textarea,
+  [data-no-print] {
+    display: none !important;
+  }
+
+  /* Clean up borders and shadows for print */
+  * {
+    box-shadow: none !important;
+  }
+
+  /* Ensure proper page breaks */
+  table {
+    page-break-inside: avoid;
+  }
+
+  /* Set white background */
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

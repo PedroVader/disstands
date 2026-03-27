@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { cn, safeImageUrl } from "@/lib/utils";
 import { PortfolioItem } from "@/types";
 
 interface PortfolioCardProps {
@@ -17,7 +17,7 @@ export function PortfolioCard({ item, className }: PortfolioCardProps) {
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
-          src={item.image}
+          src={safeImageUrl(item.image)}
           alt={item.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"

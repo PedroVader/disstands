@@ -1,25 +1,36 @@
+"use client";
+
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { SectionTitle } from "@/components/shared/section-title";
 import { ProductCard } from "@/components/shared/product-card";
 import { CtaButton } from "@/components/shared/cta-button";
-import { featuredProducts } from "@/data/products";
+import { featuredProducts as mockFeatured } from "@/data/products";
+import { useTranslation } from "@/i18n";
+import type { Product } from "@/types";
 
-export function FeaturedProducts() {
+interface Props {
+  data?: Product[];
+}
+
+export function FeaturedProducts({ data }: Props) {
+  const { t } = useTranslation();
+  const products = data && data.length > 0 ? data : mockFeatured;
+
   return (
     <SectionWrapper background="white" id="productos">
       <SectionTitle
-        title="Productos Destacados"
-        subtitle="Los pavimentos más solicitados por nuestros clientes profesionales"
+        title={t.products.title}
+        subtitle={t.products.subtitle}
         colorScheme="light"
       />
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {featuredProducts.map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
       <div className="mt-12 text-center">
         <CtaButton variant="secondary" size="lg" href="#categorias">
-          Ver catálogo completo
+          {t.products.cta}
         </CtaButton>
       </div>
     </SectionWrapper>

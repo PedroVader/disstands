@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { TranslationProvider } from "@/i18n";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Disstands — Pavimentos que transforman espacios",
@@ -42,7 +44,10 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        {children}
+        <TranslationProvider>
+          {children}
+        </TranslationProvider>
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );

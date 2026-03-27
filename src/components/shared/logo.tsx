@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -7,14 +8,17 @@ interface LogoProps {
 
 export function Logo({ variant = "white", className }: LogoProps) {
   return (
-    <span
+    <Image
+      src="/images/logo-disstands.png"
+      alt="Disstands"
+      width={160}
+      height={48}
       className={cn(
-        "font-[var(--font-heading)] text-2xl font-bold tracking-tight",
-        variant === "white" ? "text-white" : "text-brand-black",
+        "h-8 w-auto",
+        variant === "white" && "brightness-0 invert",
         className
       )}
-    >
-      DISSTANDS
-    </span>
+      priority
+    />
   );
 }

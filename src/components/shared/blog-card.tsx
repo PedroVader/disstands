@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { cn, safeImageUrl } from "@/lib/utils";
 import { BlogPost } from "@/types";
 
 interface BlogCardProps {
@@ -18,7 +18,7 @@ export function BlogCard({ post, className }: BlogCardProps) {
     >
       <div className="relative aspect-video overflow-hidden">
         <Image
-          src={post.image}
+          src={safeImageUrl(post.image)}
           alt={post.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
