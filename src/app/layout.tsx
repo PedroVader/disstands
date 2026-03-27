@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { TranslationProvider } from "@/i18n";
 import { Toaster } from "sonner";
+import { ChatBubble } from "@/components/shared/chat-bubble";
 
 export const metadata: Metadata = {
   title: "Disstands — Pavimentos que transforman espacios",
@@ -48,6 +49,7 @@ export default function RootLayout({
           {children}
         </TranslationProvider>
         <Toaster richColors position="top-right" />
+        <ChatBubble />
       </body>
     </html>
   );
