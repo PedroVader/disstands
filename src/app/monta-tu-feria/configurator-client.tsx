@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import { Stage, Layer, Rect, Text as KonvaText, Group } from "react-konva";
+import { Stage, Layer, Rect, Text as KonvaText, Group, Image as KonvaImage } from "react-konva";
 import Link from "next/link";
 import {
   Grid3x3, Palette, Download, Save, RotateCcw, ZoomIn, ZoomOut,
@@ -135,6 +135,15 @@ export function FloorPlanConfigurator({ floorTypes }: { floorTypes: FloorType[] 
   const stageRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerSize, setContainerSize] = useState({ width: 800, height: 600 });
+  const [logoImage, setLogoImage] = useState<HTMLImageElement | null>(null);
+
+  // Load logo for watermark
+  useEffect(() => {
+    const img = new window.Image();
+    img.crossOrigin = "anonymous";
+    img.src = "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logo-disstands.png";
+    img.onload = () => setLogoImage(img);
+  }, []);
 
   // Resize observer
   useEffect(() => {
@@ -695,6 +704,30 @@ export function FloorPlanConfigurator({ floorTypes }: { floorTypes: FloorType[] 
                   fontStyle="bold"
                 />
               </Group>
+
+              {/* Disstands logo watermark — bottom right */}
+              {logoImage && (
+                <Group
+                  x={gridCols * cellSize - 120}
+                  y={gridRows * cellSize + 30}
+                >
+                  <KonvaImage
+                    image={logoImage}
+                    width={110}
+                    height={33}
+                    opacity={0.6}
+                  />
+                  <KonvaText
+                    x={0}
+                    y={36}
+                    text="disstands.com"
+                    fontSize={9}
+                    fill="#9CA3AF"
+                    width={110}
+                    align="center"
+                  />
+                </Group>
+              )}
             </Layer>
           </Stage>
 
