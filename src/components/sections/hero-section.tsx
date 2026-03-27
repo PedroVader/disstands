@@ -12,7 +12,7 @@ export function HeroSection() {
   const titleParts = t.hero.title.split(/(transforman|transforms)/i);
 
   return (
-    <section className="relative flex min-h-[85vh] items-center overflow-hidden">
+    <section className="relative flex min-h-[70vh] items-center overflow-hidden">
       {/* Background photo */}
       <Image
         src="/hero-bg.jpg"
@@ -24,7 +24,7 @@ export function HeroSection() {
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <div className="max-w-3xl text-center lg:text-left">
           <p className="font-[var(--font-mono)] text-sm uppercase tracking-widest text-brand-red">
             {t.hero.badge}
