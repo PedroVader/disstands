@@ -17,14 +17,25 @@ import {
   getPortfolioItems,
 } from "@/lib/supabase/queries";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
-  const [categories, featuredProducts, blogPosts, portfolioItems] =
-    await Promise.all([
-      getCategories(),
-      getProducts({ featured: true, limit: 4 }),
-      getBlogPosts({ limit: 3 }),
-      getPortfolioItems(),
-    ]);
+  let categories: Awaited<ReturnType<typeof getCategories>> = [];
+  let featuredProducts: Awaited<ReturnType<typeof getProducts>> = [];
+  let blogPosts: Awaited<ReturnType<typeof getBlogPosts>> = [];
+  let portfolioItems: Awaited<ReturnType<typeof getPortfolioItems>> = [];
+
+  try {
+    [categories, featuredProducts, blogPosts, portfolioItems] =
+      await Promise.all([
+        getCategories(),
+        getProducts({ featured: true, limit: 4 }),
+        getBlogPosts({ limit: 3 }),
+        getPortfolioItems(),
+      ]);
+  } catch (e) {
+    console.error("Home: failed to load data", e);
+  }
 
   return (
     <>
