@@ -84,7 +84,7 @@ export function ChatBubble() {
     <>
       {/* Chat window */}
       {open && (
-        <div className="fixed bottom-20 right-4 z-50 flex h-[28rem] w-[22rem] flex-col overflow-hidden rounded-2xl border border-brand-gray bg-white shadow-2xl sm:bottom-24 sm:right-6 sm:h-[32rem] sm:w-[24rem]">
+        <div className="fixed bottom-20 left-4 z-50 flex h-[28rem] w-[22rem] flex-col overflow-hidden rounded-2xl border border-brand-gray bg-white shadow-2xl sm:bottom-24 sm:left-6 sm:h-[32rem] sm:w-[24rem]">
           {/* Header */}
           <div className="flex items-center gap-3 bg-brand-black px-4 py-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-red">
@@ -168,7 +168,7 @@ export function ChatBubble() {
       {/* Floating bubble button */}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-4 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-red shadow-lg transition-all hover:scale-105 hover:bg-brand-red-dark sm:bottom-6 sm:right-6"
+        className="fixed bottom-4 left-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-red shadow-lg transition-all hover:scale-105 hover:bg-brand-red-dark sm:bottom-6 sm:left-6"
         aria-label={open ? "Cerrar chat" : "Abrir chat"}
       >
         {open ? (
