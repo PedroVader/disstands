@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# images (served from CDN / local only)
+/public/images/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
