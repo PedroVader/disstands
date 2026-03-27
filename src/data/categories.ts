@@ -6,7 +6,7 @@ export const categories: Category[] = [
     "name": "Moquetas",
     "slug": "moquetas",
     "productCount": 98,
-    "image": "/images/categories/moquetas.png",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/moquetas.png",
     "description": "Catálogo completo de moquetas Disstands"
   },
   {
@@ -14,7 +14,7 @@ export const categories: Category[] = [
     "name": "Césped Artificial",
     "slug": "cesped-artificial",
     "productCount": 24,
-    "image": "/images/categories/cesped-artificial.jpg",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/cesped-artificial.jpg",
     "description": "Catálogo completo de césped artificial Disstands"
   },
   {
@@ -22,7 +22,7 @@ export const categories: Category[] = [
     "name": "Jardines Verticales",
     "slug": "jardines-verticales",
     "productCount": 15,
-    "image": "/images/categories/jardines-verticales.png",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/jardines-verticales.png",
     "description": "Catálogo completo de jardines verticales Disstands"
   },
   {
@@ -30,7 +30,7 @@ export const categories: Category[] = [
     "name": "Accesorios",
     "slug": "accesorios",
     "productCount": 37,
-    "image": "/images/categories/accesorios.png",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/accesorios.png",
     "description": "Catálogo completo de accesorios Disstands"
   },
   {
@@ -38,7 +38,7 @@ export const categories: Category[] = [
     "name": "Suelos PVC",
     "slug": "suelos-pvc",
     "productCount": 61,
-    "image": "/images/categories/suelos-pvc.jpg",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/suelos-pvc.jpg",
     "description": "Catálogo completo de suelos pvc Disstands"
   },
   {
@@ -46,7 +46,7 @@ export const categories: Category[] = [
     "name": "Contract",
     "slug": "contract",
     "productCount": 23,
-    "image": "/images/categories/contract.png",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/contract.png",
     "description": "Catálogo completo de contract Disstands"
   },
   {
@@ -54,7 +54,7 @@ export const categories: Category[] = [
     "name": "Caucho y Deportivos",
     "slug": "caucho-deportivos",
     "productCount": 13,
-    "image": "/images/categories/caucho-deportivos.png",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/caucho-deportivos.png",
     "description": "Catálogo completo de caucho y deportivos Disstands"
   },
   {
@@ -62,7 +62,7 @@ export const categories: Category[] = [
     "name": "Adhesivos y Colas",
     "slug": "adhesivos",
     "productCount": 2,
-    "image": "/images/categories/adhesivos.png",
+    "image": "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/categories/adhesivos.png",
     "description": "Catálogo completo de adhesivos y colas Disstands"
   }
 ];

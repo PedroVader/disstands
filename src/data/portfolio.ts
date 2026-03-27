@@ -6,7 +6,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Mobile World Congress 2026",
     client: "MWC Barcelona",
     year: 2026,
-    image: "/images/portfolio/mwc-2026.webp",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/mwc-2026.webp",
     category: "Ferias",
   },
   {
@@ -14,7 +14,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Desigual Fashion Show",
     client: "Desigual",
     year: 2025,
-    image: "/images/portfolio/desigual.jpg",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/desigual.jpg",
     category: "Eventos",
   },
   {
@@ -22,7 +22,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Salón Náutico Internacional",
     client: "Port Vell Barcelona",
     year: 2025,
-    image: "/images/portfolio/salon-nautico.jpg",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/salon-nautico.jpg",
     category: "Ferias",
   },
   {
@@ -30,7 +30,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Plató 3Cat Info",
     client: "TV3 · 3Cat",
     year: 2025,
-    image: "/images/portfolio/tv3.jpg",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/tv3.jpg",
     category: "Contract",
   },
   {
@@ -38,7 +38,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "ICE Barcelona 2026",
     client: "ICE · Fira Barcelona",
     year: 2026,
-    image: "/images/portfolio/ice-barcelona.webp",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/ice-barcelona.webp",
     category: "Ferias",
   },
   {
@@ -46,7 +46,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Adidas Football — Set Messi",
     client: "Adidas",
     year: 2025,
-    image: "/images/portfolio/adidas-disstands.jpeg",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/adidas-disstands.jpeg",
     category: "Comercial",
   },
   {
@@ -54,7 +54,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Alimentaria 2025",
     client: "Fira Barcelona",
     year: 2025,
-    image: "/images/portfolio/alimentaria.webp",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/alimentaria.webp",
     category: "Ferias",
   },
   {
@@ -62,7 +62,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Hotel W Barcelona",
     client: "W Hotels",
     year: 2024,
-    image: "/images/portfolio/hotel-w.jpg",
+    image: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/portfolio/hotel-w.jpg",
     category: "Contract",
   },
 ];

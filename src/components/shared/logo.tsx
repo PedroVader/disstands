@@ -9,7 +9,7 @@ interface LogoProps {
 export function Logo({ variant = "white", className }: LogoProps) {
   return (
     <Image
-      src="/images/logo-disstands.png"
+      src="https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logo-disstands.png"
       alt="Disstands"
       width={160}
       height={48}

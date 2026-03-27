@@ -4,34 +4,34 @@ export const trustClients: TrustClient[] = [
   {
     id: "adidas",
     name: "Adidas",
-    logo: "/images/logos/adidas.png",
+    logo: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logos/adidas.png",
   },
   {
     id: "mwc",
     name: "MWC Barcelona",
-    logo: "/images/logos/mwc.png",
+    logo: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logos/mwc.png",
     large: true,
   },
   {
     id: "alimentaria",
     name: "Alimentaria",
-    logo: "/images/logos/alimentaria.png",
+    logo: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logos/alimentaria.png",
     large: true,
   },
   {
     id: "nike",
     name: "Nike",
-    logo: "/images/logos/nike.png",
+    logo: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logos/nike.png",
   },
   {
     id: "tv3",
     name: "TV3",
-    logo: "/images/logos/tv3.png",
+    logo: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logos/tv3.png",
   },
   {
     id: "fira",
     name: "Fira Barcelona",
-    logo: "/images/logos/fira.png",
+    logo: "https://srwybogqbmfhfmxjzaem.supabase.co/storage/v1/object/public/images/site/logos/fira.png",
     large: true,
   },
 ];
