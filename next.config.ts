@@ -114,6 +114,13 @@ const nextConfig: NextConfig = {
         destination: "/contacto",
         permanent: true,
       },
+
+      // Cannibalization fix
+      {
+        source: "/moquetas-barcelona-2",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
