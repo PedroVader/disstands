@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { MessageCircle, X, Send, Loader2 } from "lucide-react";
 
 interface Message {
@@ -15,6 +16,7 @@ const WELCOME_MESSAGE: Message = {
 };
 
 export function ChatBubble() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([WELCOME_MESSAGE]);
   const [input, setInput] = useState("");
@@ -79,6 +81,8 @@ export function ChatBubble() {
       setLoading(false);
     }
   }
+
+  if (pathname.startsWith("/admin")) return null;
 
   return (
     <>
