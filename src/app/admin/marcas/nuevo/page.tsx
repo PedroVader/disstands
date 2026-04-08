@@ -51,13 +51,13 @@ export default function AdminClienteNuevoPage() {
 
     if (insertError) {
       setError(insertError.message);
-      toast.error("Error al crear el cliente");
+      toast.error("Error al crear la marca");
       setSaving(false);
       return;
     }
 
-    toast.success("Cliente creado");
-    router.push("/admin/clientes");
+    toast.success("Marca creada");
+    router.push("/admin/marcas");
   };
 
   return (
@@ -66,17 +66,17 @@ export default function AdminClienteNuevoPage() {
         {/* Header */}
         <div className="flex items-center gap-4">
           <Link
-            href="/admin/clientes"
+            href="/admin/marcas"
             className="rounded-lg p-1.5 text-brand-gray-dark transition-colors hover:bg-white hover:text-brand-black"
           >
             <ArrowLeft className="h-5 w-5" />
           </Link>
           <div>
             <h1 className="font-[var(--font-heading)] text-2xl font-bold text-brand-black">
-              Nuevo cliente
+              Nueva marca
             </h1>
             <p className="mt-0.5 text-sm text-brand-gray-dark">
-              Rellena los datos del nuevo cliente
+              Rellena los datos de la nueva marca
             </p>
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function AdminClienteNuevoPage() {
               onChange={(e) => setNotes(e.target.value)}
               rows={3}
               className="mt-3 w-full rounded-lg border border-brand-gray bg-white px-3 py-2 text-sm outline-none focus:border-brand-red"
-              placeholder="Notas internas sobre el cliente…"
+              placeholder="Notas internas sobre la marca…"
             />
           </div>
 
@@ -212,7 +212,7 @@ export default function AdminClienteNuevoPage() {
 
           <div className="flex items-center justify-end gap-3">
             <Link
-              href="/admin/clientes"
+              href="/admin/marcas"
               className="rounded-lg border border-brand-gray px-4 py-2.5 text-sm font-medium text-brand-gray-dark transition-colors hover:bg-brand-cream"
             >
               Cancelar
@@ -223,7 +223,7 @@ export default function AdminClienteNuevoPage() {
               className="inline-flex items-center gap-2 rounded-lg bg-brand-red px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-red-dark disabled:opacity-50"
             >
               <Save className="h-4 w-4" />
-              {saving ? "Guardando…" : "Crear cliente"}
+              {saving ? "Guardando…" : "Crear marca"}
             </button>
           </div>
         </form>

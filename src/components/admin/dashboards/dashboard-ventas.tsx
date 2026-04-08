@@ -21,7 +21,7 @@ export function DashboardVentas() {
         <KpiCard label="Pedidos esta semana" value="32" change={14} icon={ShoppingCart} color="red" />
         <KpiCard label="Ventas mes" value="68.100 €" change={12} icon={Euro} color="green" />
         <KpiCard label="Objetivo mensual" value="78%" change={5} icon={Target} color="amber" />
-        <KpiCard label="Nuevos clientes" value="12" change={20} icon={Users} color="blue" />
+        <KpiCard label="Nuevas marcas" value="12" change={20} icon={Users} color="blue" />
       </div>
 
       {/* Charts row 1 */}
@@ -49,7 +49,7 @@ export function DashboardVentas() {
             {[
               { text: "3 presupuestos pendientes de envío", icon: "📋" },
               { text: "Pedido #1243 — confirmar pago", icon: "💳" },
-              { text: "Cliente Intermodal BCN — seguimiento", icon: "📞" },
+              { text: "Marca Intermodal BCN — seguimiento", icon: "📞" },
               { text: "Restock alerta: PVC Click (23 m²)", icon: "⚠️" },
               { text: "5 consultas web sin responder", icon: "✉️" },
             ].map((item, i) => (
@@ -68,7 +68,7 @@ export function DashboardVentas() {
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {[
               { label: "Nuevo pedido", href: "/admin/pedidos", icon: ShoppingCart },
-              { label: "Nuevo cliente", href: "/admin/clientes/nuevo", icon: Users },
+              { label: "Nueva marca", href: "/admin/marcas/nuevo", icon: Users },
               { label: "Catálogo", href: "/admin/productos", icon: Package },
               { label: "Informes", href: "/admin/finanzas", icon: TrendingUp },
             ].map((action) => (

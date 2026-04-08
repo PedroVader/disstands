@@ -134,7 +134,7 @@ export default function AdminPortfolioEditPage({ params }: { params: Promise<{ i
                     className="mt-1 w-full rounded-lg border border-brand-gray bg-white px-3 py-2 text-sm outline-none focus:border-brand-red" />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-brand-black">Cliente</label>
+                  <label className="text-sm font-medium text-brand-black">Marca</label>
                   <input type="text" maxLength={200} value={clientName} onChange={(e) => setClientName(e.target.value)}
                     className="mt-1 w-full rounded-lg border border-brand-gray bg-white px-3 py-2 text-sm outline-none focus:border-brand-red" />
                 </div>

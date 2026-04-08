@@ -38,7 +38,7 @@ export const es = {
   // Products
   products: {
     title: "Productos destacados",
-    subtitle: "Los más elegidos por nuestros clientes",
+    subtitle: "Los más elegidos por nuestras marcas",
     cta: "Ver catálogo completo",
     from: "Desde",
     under_consultation: "Bajo consulta",

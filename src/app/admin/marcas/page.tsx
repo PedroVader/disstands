@@ -85,9 +85,9 @@ export default function AdminClientesPage() {
     const supabase = createClient();
     const { error } = await supabase.from("clients").delete().eq("id", id);
     if (error) {
-      toast.error("Error al eliminar el cliente");
+      toast.error("Error al eliminar la marca");
     } else {
-      toast.success("Cliente eliminado");
+      toast.success("Marca eliminada");
     }
     loadClients();
   };
@@ -127,18 +127,18 @@ export default function AdminClientesPage() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="font-[var(--font-heading)] text-2xl font-bold text-brand-black">
-              Clientes
+              Marcas y Modelos
             </h1>
             <p className="mt-1 text-sm text-brand-gray-dark">
-              {total} clientes registrados
+              {total} marcas registradas
             </p>
           </div>
           <Link
-            href="/admin/clientes/nuevo"
+            href="/admin/marcas/nuevo"
             className="inline-flex items-center gap-2 rounded-lg bg-brand-red px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-red-dark"
           >
             <Plus className="h-4 w-4" />
-            Nuevo cliente
+            Nueva marca
           </Link>
         </div>
 
@@ -194,12 +194,12 @@ export default function AdminClientesPage() {
 
         {/* Cards grid */}
         {loading ? (
-          <div className="py-12 text-center text-brand-gray-dark">Cargando clientes…</div>
+          <div className="py-12 text-center text-brand-gray-dark">Cargando marcas…</div>
         ) : clients.length === 0 ? (
           <div className="py-12 text-center">
-            <p className="text-brand-gray-dark">No se encontraron clientes</p>
+            <p className="text-brand-gray-dark">No se encontraron marcas</p>
             <Link
-              href="/admin/clientes/nuevo"
+              href="/admin/marcas/nuevo"
               className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-brand-red hover:text-brand-red-dark"
             >
               <Plus className="h-4 w-4" />
@@ -213,7 +213,7 @@ export default function AdminClientesPage() {
                 key={client.id}
                 className="group relative rounded-lg border border-brand-gray bg-white p-5 transition-all hover:border-brand-red hover:shadow-md"
               >
-                <Link href={`/admin/clientes/${client.id}`} className="absolute inset-0 z-0 rounded-lg" />
+                <Link href={`/admin/marcas/${client.id}`} className="absolute inset-0 z-0 rounded-lg" />
 
                 <div className="relative z-10 pointer-events-none">
                   <div className="flex items-start justify-between">
@@ -308,8 +308,8 @@ export default function AdminClientesPage() {
       </div>
       <ConfirmDialog
         open={!!deleteTarget}
-        title="Eliminar cliente"
-        description={`¿Eliminar a "${deleteTarget?.name}"? Se perderán todos sus datos. Esta acción no se puede deshacer.`}
+        title="Eliminar marca"
+        description={`¿Eliminar "${deleteTarget?.name}"? Se perderán todos sus datos. Esta acción no se puede deshacer.`}
         confirmLabel="Eliminar"
         variant="danger"
         onConfirm={() => { if (deleteTarget) confirmDelete(deleteTarget.id); setDeleteTarget(null); }}

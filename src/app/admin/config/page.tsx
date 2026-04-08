@@ -22,9 +22,9 @@ interface ProfileRow {
 
 const ROLES = [
   { value: "super_admin", label: "Super Admin", description: "Acceso total al sistema" },
-  { value: "ceo", label: "CEO", description: "Dashboard, productos, pedidos, clientes, calendario, finanzas" },
-  { value: "ventas", label: "Ventas", description: "Productos, pedidos, clientes, calendario" },
-  { value: "contabilidad", label: "Contabilidad", description: "Pedidos, clientes, finanzas" },
+  { value: "ceo", label: "CEO", description: "Dashboard, productos, pedidos, marcas, calendario, finanzas" },
+  { value: "ventas", label: "Ventas", description: "Productos, pedidos, marcas, calendario" },
+  { value: "contabilidad", label: "Contabilidad", description: "Pedidos, marcas, finanzas" },
   { value: "montajes", label: "Montajes", description: "Pedidos, calendario" },
   { value: "trabajador", label: "Trabajador", description: "Acceso básico (por defecto al registrarse)" },
 ];
@@ -301,7 +301,7 @@ export default function AdminConfigPage() {
                   <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Dashboard</th>
                   <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Productos</th>
                   <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Pedidos</th>
-                  <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Clientes</th>
+                  <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Marcas</th>
                   <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Calendario</th>
                   <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Finanzas</th>
                   <th className="pb-2 px-2 text-center font-medium text-brand-gray-dark">Blog</th>

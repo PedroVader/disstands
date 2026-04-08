@@ -236,7 +236,7 @@ export function DashboardAdmin() {
           color="amber"
         />
         <KpiCard
-          label="Clientes"
+          label="Marcas"
           value={String(kpis?.totalClients ?? 0)}
           icon={Users}
           color="default"
@@ -270,7 +270,7 @@ export function DashboardAdmin() {
                 <thead>
                   <tr className="border-b border-brand-gray text-left">
                     <th className="pb-2 pr-4 text-xs font-medium text-brand-gray-dark">Pedido</th>
-                    <th className="pb-2 pr-4 text-xs font-medium text-brand-gray-dark">Cliente</th>
+                    <th className="pb-2 pr-4 text-xs font-medium text-brand-gray-dark">Marca</th>
                     <th className="pb-2 pr-4 text-xs font-medium text-brand-gray-dark">Estado</th>
                     <th className="pb-2 text-right text-xs font-medium text-brand-gray-dark">Total</th>
                   </tr>

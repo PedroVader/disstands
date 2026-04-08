@@ -238,7 +238,7 @@ export default function AdminPedidosPage() {
               <thead>
                 <tr className="border-b border-brand-gray bg-brand-cream text-left">
                   <th className="px-4 py-3 text-xs"><SortButton field="order_number">Nº Pedido</SortButton></th>
-                  <th className="hidden px-4 py-3 text-xs font-medium text-brand-gray-dark sm:table-cell">Cliente</th>
+                  <th className="hidden px-4 py-3 text-xs font-medium text-brand-gray-dark sm:table-cell">Marca</th>
                   <th className="px-4 py-3 text-xs font-medium text-brand-gray-dark">Estado</th>
                   <th className="px-4 py-3 text-xs"><SortButton field="total">Total</SortButton></th>
                   <th className="hidden px-4 py-3 text-xs font-medium text-brand-gray-dark md:table-cell">Instalación</th>

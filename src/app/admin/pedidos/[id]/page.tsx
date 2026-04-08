@@ -412,7 +412,7 @@ export default function AdminPedidoDetailPage({ params }: { params: Promise<{ id
             <div className="rounded-lg border border-brand-gray bg-white p-5">
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4 text-brand-gray-dark" />
-                <h2 className="text-sm font-semibold text-brand-black">Cliente</h2>
+                <h2 className="text-sm font-semibold text-brand-black">Marca</h2>
               </div>
               {order.clients ? (
                 <div className="mt-3 space-y-1.5 text-sm">
@@ -421,14 +421,14 @@ export default function AdminPedidoDetailPage({ params }: { params: Promise<{ id
                   <p className="text-brand-gray-dark">{order.clients.email}</p>
                   {order.clients.phone && <p className="text-brand-gray-dark">{order.clients.phone}</p>}
                   <Link
-                    href={`/admin/clientes/${order.clients.id}`}
+                    href={`/admin/marcas/${order.clients.id}`}
                     className="mt-2 inline-block text-xs font-medium text-brand-red hover:text-brand-red-dark"
                   >
-                    Ver ficha del cliente →
+                    Ver ficha de la marca →
                   </Link>
                 </div>
               ) : (
-                <p className="mt-3 text-sm text-brand-gray-dark">Sin cliente asociado</p>
+                <p className="mt-3 text-sm text-brand-gray-dark">Sin marca asociada</p>
               )}
             </div>
 

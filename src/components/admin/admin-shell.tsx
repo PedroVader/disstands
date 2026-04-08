@@ -33,7 +33,7 @@ const menuItems = [
   { label: "Productos", href: "/admin/productos", icon: Package, roles: ["super_admin", "ceo", "ventas"] },
   { label: "Categorías", href: "/admin/categorias", icon: Tag, roles: ["super_admin", "ceo"] },
   { label: "Pedidos", href: "/admin/pedidos", icon: ShoppingCart, roles: ["super_admin", "ceo", "ventas", "contabilidad", "montajes"] },
-  { label: "Clientes", href: "/admin/clientes", icon: Users, roles: ["super_admin", "ceo", "ventas"] },
+  { label: "Marcas y Modelos", href: "/admin/marcas", icon: Users, roles: ["super_admin", "ceo", "ventas"] },
   { label: "Calendario", href: "/admin/calendario", icon: Calendar, roles: ["super_admin", "ceo", "ventas", "contabilidad", "montajes", "trabajador"] },
   { label: "Inventario", href: "/admin/inventario", icon: Warehouse, roles: ["super_admin", "ceo", "montajes"] },
   { label: "Consultas", href: "/admin/consultas", icon: MessageSquare, roles: ["super_admin", "ceo", "ventas"] },

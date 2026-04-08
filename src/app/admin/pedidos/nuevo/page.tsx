@@ -115,7 +115,7 @@ export default function NuevoPedidoPage() {
     e.preventDefault();
     setError("");
 
-    if (!clientId) { setError("Selecciona un cliente"); return; }
+    if (!clientId) { setError("Selecciona una marca"); return; }
     if (lines.some((l) => !l.productId || l.m2 <= 0)) {
       setError("Completa todas las líneas del pedido");
       return;
@@ -217,16 +217,16 @@ export default function NuevoPedidoPage() {
         <form onSubmit={handleSubmit} className="mx-auto w-full max-w-3xl space-y-6">
           {/* Client & Status */}
           <div className="rounded-lg border border-brand-gray bg-white p-5">
-            <h2 className="text-sm font-semibold text-brand-black">Cliente y estado</h2>
+            <h2 className="text-sm font-semibold text-brand-black">Marca y estado</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <div>
-                <label className="text-sm font-medium text-brand-black">Cliente *</label>
+                <label className="text-sm font-medium text-brand-black">Marca *</label>
                 <select
                   value={clientId}
                   onChange={(e) => setClientId(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-brand-gray bg-white px-3 py-2 text-sm outline-none focus:border-brand-red"
                 >
-                  <option value="">Seleccionar cliente…</option>
+                  <option value="">Seleccionar marca…</option>
                   {clients.map((c) => (
                     <option key={c.id} value={c.id}>
                       {c.company || c.contact_name} — {c.email}

@@ -81,7 +81,7 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
       .single();
 
     if (!data) {
-      router.push("/admin/clientes");
+      router.push("/admin/marcas");
       return;
     }
 
@@ -137,9 +137,9 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
 
     if (updateError) {
       setError(updateError.message);
-      toast.error("Error al guardar el cliente");
+      toast.error("Error al guardar la marca");
     } else {
-      toast.success("Cliente guardado");
+      toast.success("Marca guardada");
     }
     setSaving(false);
   };
@@ -148,10 +148,10 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
     const supabase = createClient();
     const { error } = await supabase.from("clients").delete().eq("id", id);
     if (error) {
-      toast.error("Error al eliminar el cliente");
+      toast.error("Error al eliminar la marca");
     } else {
-      toast.success("Cliente eliminado");
-      router.push("/admin/clientes");
+      toast.success("Marca eliminada");
+      router.push("/admin/marcas");
     }
   };
 
@@ -162,7 +162,7 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
     return (
       <AdminShell>
         <div className="flex items-center justify-center py-20">
-          <p className="text-brand-gray-dark">Cargando cliente…</p>
+          <p className="text-brand-gray-dark">Cargando marca…</p>
         </div>
       </AdminShell>
     );
@@ -176,7 +176,7 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
         {/* Header */}
         <div className="flex items-center gap-4">
           <Link
-            href="/admin/clientes"
+            href="/admin/marcas"
             className="rounded-lg p-1.5 text-brand-gray-dark transition-colors hover:bg-white hover:text-brand-black"
           >
             <ArrowLeft className="h-5 w-5" />
@@ -195,7 +195,7 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
           <button
             onClick={() => setShowDeleteConfirm(true)}
             className="ml-auto rounded-lg p-2 text-brand-gray-dark transition-colors hover:bg-red-50 hover:text-brand-red"
-            title="Eliminar cliente"
+            title="Eliminar marca"
           >
             <Trash2 className="h-5 w-5" />
           </button>
@@ -319,7 +319,7 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
                 onChange={(e) => setNotes(e.target.value)}
                 rows={4}
                 className="mt-3 w-full rounded-lg border border-brand-gray bg-white px-3 py-2 text-sm outline-none focus:border-brand-red"
-                placeholder="Notas internas sobre el cliente…"
+                placeholder="Notas internas sobre la marca…"
               />
             </div>
 
@@ -355,7 +355,7 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
                 </div>
               </div>
               <p className="mt-4 text-xs text-brand-gray-dark">
-                Cliente desde {new Date(client.created_at).toLocaleDateString("es-ES", { month: "long", year: "numeric" })}
+                Marca desde {new Date(client.created_at).toLocaleDateString("es-ES", { month: "long", year: "numeric" })}
               </p>
             </div>
 
@@ -396,8 +396,8 @@ export default function AdminClienteDetailPage({ params }: { params: Promise<{ i
       </div>
       <ConfirmDialog
         open={showDeleteConfirm}
-        title="Eliminar cliente"
-        description={`¿Eliminar a "${client.contact_name}"? Se perderán todos sus datos. Esta acción no se puede deshacer.`}
+        title="Eliminar marca"
+        description={`¿Eliminar "${client.contact_name}"? Se perderán todos sus datos. Esta acción no se puede deshacer.`}
         confirmLabel="Eliminar"
         variant="danger"
         onConfirm={() => { handleDelete(); setShowDeleteConfirm(false); }}
